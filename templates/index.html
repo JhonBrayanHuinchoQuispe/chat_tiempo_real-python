@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="pusher-key" content="{{ clave_pusher }}" />
+    <meta name="pusher-cluster" content="{{ cluster_pusher }}" />
+    <title>Chat en Tiempo Real</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="encabezado">
+        <h1>Chat en Tiempo Real</h1>
+      </div>
+      
+      <div id="mensajes"></div>
+
+      <div class="area-entrada">
+        <div class="grupo-entrada">
+          <input id="usuario" type="text" placeholder="Tu nombre" />
+          <input id="texto" type="text" placeholder="Escribe un mensaje..." />
+        </div>
+        <button id="enviar">Enviar</button>
+      </div>
+    </div>
+
+    <script src="https://js.pusher.com/8.4/pusher.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
